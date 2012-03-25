@@ -28,6 +28,22 @@ class Foo
 end
 ```
 
+## Timers
+
+```ruby
+class Foo
+  extend MetricsJ::Timer
+
+  timer :bar
+
+  def baz
+    bar_timer {
+      # Do something...
+    }
+  end
+end
+```
+
 # Todo
 
 Most everything, still:
