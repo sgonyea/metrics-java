@@ -20,10 +20,11 @@ class Foo
 
   meter :bar
 
-  def bar
+  def baz
     bar_meter.mark
     # Do something...
   end
+
 end
 ```
 
@@ -36,3 +37,5 @@ Most everything, still:
 - Histograms
 - Timers
 - Health Checks
+
+In addition, there will be a Rails and a Sinatra/Padrino plugin that will hopefully hide most of these details.
