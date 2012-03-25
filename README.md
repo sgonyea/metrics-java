@@ -53,7 +53,6 @@ Most everything, still:
 - Gauges
 - Counters
 - Histograms
-- Timers
 - Health Checks
 
 In addition, there will be a Rails and a Sinatra/Padrino plugin that will hopefully hide most of these details.
