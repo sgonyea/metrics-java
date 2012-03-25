@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Scott Gonyea"]
   s.email       = ["sgonyea@truecar.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{JRuby wrapper around Coda's Metrics Library}
+  s.description = %q{A JRuby wrapper around Coda Hale's Metrics Library}
 
   s.rubyforge_project = "metrics-java"
 
