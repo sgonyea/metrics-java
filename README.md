@@ -57,3 +57,5 @@ Most everything, still:
 - Health Checks
 
 In addition, there will be a Rails and a Sinatra/Padrino plugin that will hopefully hide most of these details.
+
+Testing needs to be rounded out. This is may involve hooking into JMX to ensure that we behave correctly, all the way through the stack. Opinions welcome.
