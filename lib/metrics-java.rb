@@ -6,6 +6,7 @@ require 'metrics-java/jars/metrics-core-3.0.0-SNAPSHOT.jar'
 require 'metrics-java/jars/metrics-log4j-3.0.0-SNAPSHOT.jar'
 
 require 'metrics-java/meter'
+require 'metrics-java/timer'
 require 'metrics-java/version'
 
 module MetricsJ
@@ -22,6 +23,10 @@ module MetricsJ
 
     def time_unit_seconds
       TimeUnit::SECONDS
+    end
+
+    def time_unit_milliseconds
+      TimeUnit::MILLISECONDS
     end
 
     # @param [String] group
