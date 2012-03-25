@@ -13,17 +13,22 @@ module MetricsJ
       }
     end
 
+    # @param [Symbol, String] meter_name The name of the meter
     # @return [com.yammer.metrics.core.MetricName] The MetricName that describes where the Metric data lives in JMX
     # @see MetricsJ.create_metric_name
-    def scoped_meter(scope_name)
-      scoped_name = "#{scope_name}_meter"
-      metric_name = MetricsJ.create_metric_name(metric_group, metric_type, scope_name.to_s)
+    def meter(meter_name)
+      scoped_name = "#{meter_name}_meter"
+      metric_name = MetricsJ.create_metric_name(metric_group, metric_type, meter_name.to_s)
 
-      new_meter = Metrics.new_meter(metric_name, scope_name.to_s, MetricsJ.time_unit_seconds)
+      new_meter = Metrics.new_meter(metric_name, meter_name.to_s, MetricsJ.time_unit_seconds)
 
       define_method(scoped_name) { new_meter }
 
       new_meter
+    end
+
+    def meters(*meter_names)
+      meter_names.map!{ |meter_name| meter(meter_name) }
     end
 
     module InstanceMethods

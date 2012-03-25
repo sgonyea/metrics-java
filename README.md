@@ -18,7 +18,7 @@ You can view the metrics that your app is collecting by running `jconsole` from 
 class Foo
   extend MetricsJ::Meter
 
-  scoped_meter :bar
+  meter :bar
 
   def bar
     bar_meter.mark
