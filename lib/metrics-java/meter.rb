@@ -9,7 +9,6 @@ module MetricsJ
     def self.extended(base)
       base.instance_exec {
         extend  MetricsJ::BaseMixin
-        include MetricsJ::Meter::InstanceMethods
       }
     end
 
@@ -29,10 +28,6 @@ module MetricsJ
 
     def meters(*meter_names)
       meter_names.map!{ |meter_name| meter(meter_name) }
-    end
-
-    module InstanceMethods
-      # @todo
     end
 
   end
