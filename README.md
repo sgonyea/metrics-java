@@ -2,6 +2,8 @@
 
 This is a primitive JRuby wrapper around [Coda Hale's Metrics library](https://github.com/codahale/metrics). It is very incomplete and still a work in progress. Feedback is appreciated.
 
+This is only tested on JRuby, in --1.9 mode.
+
 # How to Use
 
 Somewhere during the initialization of your app, you should set the name of your app. If you do not, it will default to "MyProject"
