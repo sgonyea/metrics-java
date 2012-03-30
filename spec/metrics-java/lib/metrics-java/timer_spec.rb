@@ -9,18 +9,16 @@ describe MetricsJ::Timer do
   end
 
   context "DSL" do
+    let(:timer_test) { TimerTest.new }
+
     describe '.timer' do
       it "should expose instance methods" do
-        timer_test = TimerTest.new
-
         timer_test.foo_timer.should be_a com.yammer.metrics.core.Timer
       end
     end
 
     describe '.timers' do
       it "should expose instance methods" do
-        timer_test = TimerTest.new
-
         timer_test.baz_timer.should be_a com.yammer.metrics.core.Timer
         timer_test.bar_timer.should be_a com.yammer.metrics.core.Timer
       end
