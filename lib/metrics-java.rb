@@ -6,6 +6,7 @@ require 'metrics-java/jars/metrics-core-3.0.0-SNAPSHOT.jar'
 require 'metrics-java/jars/metrics-log4j-3.0.0-SNAPSHOT.jar'
 
 require 'metrics-java/meter'
+require 'metrics-java/histogram'
 require 'metrics-java/timer'
 require 'metrics-java/version'
 

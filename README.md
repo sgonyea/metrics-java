@@ -30,6 +30,20 @@ class Foo
 end
 ```
 
+## Histograms
+
+```ruby
+class Foo
+  extend MetricsJ::Timer
+
+  histogram :bar
+
+  def baz(string)
+    bar_histogram.update(string.length)
+  end
+end
+```
+
 ## Timers
 
 ```ruby
